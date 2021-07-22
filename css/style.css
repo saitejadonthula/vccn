@@ -27,7 +27,7 @@ h2 {
   margin-left: 12px;
 }
 .d-flex {
-  width: 40% !important;
+  width: 50% !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,9 +40,16 @@ table {
   margin-right: auto;
   border: 5px solid white;
   padding: 20px;
-  background: linear-gradient(black, #222);
+  background: linear-gradient(black, #111);
 }
 td {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid white;
+}
+th {
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;

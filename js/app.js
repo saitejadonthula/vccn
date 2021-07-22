@@ -30,15 +30,18 @@ function fn1(){
         console.log("DONE LOADING!!");
         const txt = JSON.parse(this.responseText);
         let obj=txt.sessions;
+        var thead=document.getElementById('thead');
         var tbody = document.getElementById('tbody');
         try{if(obj.length==0){
             console.log("fetch-failed");
             alert("No slots! Try with another date or Pincode");
             return;
         }
+        thead.innerHTML="<tr><th>S.no</th><th>Center Name</th><th>Cost</th><th>D1</th><th>D2</th></tr>";
+        tbody.innerHTML="";
         for (var i = 0; i < obj.length; i++) {
             var tr = "<tr>";
-            tr += "<td>" + (i+1).toString()+". </td>" + "<td>" + obj[i].name + "</td>" + "<td>" + obj[i].fee.toString()+", " + "</td>" + "<td>" + obj[i].available_capacity_dose1.toString() +", "+"</td>" + "<td>" + obj[i].available_capacity_dose2.toString() +", "+ "</td> </tr>";
+            tr += "<td>" + (i+1).toString()+". </td><td>" + obj[i].name + "</td><td>" + obj[i].fee.toString() + "</td><td>" + obj[i].available_capacity_dose1.toString() +"</td><td>" + obj[i].available_capacity_dose2.toString() + "</td> </tr>";
             tbody.innerHTML += tr;
         }}
         catch(err){
