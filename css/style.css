@@ -27,7 +27,7 @@ h2 {
   margin-left: 12px;
 }
 .d-flex {
-  width: 50% !important;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,4 +63,9 @@ tr {
   border-radius: 4px;
   font-size: smaller;
   border: 1px solid white;
+}
+@media screen and (max-width: 600px){
+  .d-flex{
+      width: 90%;
+  }
 }
